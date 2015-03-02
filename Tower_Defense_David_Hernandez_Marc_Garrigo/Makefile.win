@@ -1,0 +1,30 @@
+# Project: Tower_Defense_programacion
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o $(RES)
+LINKOBJ  = main.o $(RES)
+LIBS =  -L"E:/Uni/Dev-Cpp/lib" -lm -lalleg  
+INCS =  -I"E:/Uni/Dev-Cpp/include" 
+CXXINCS =  -I"E:/Uni/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"E:/Uni/Dev-Cpp/include/c++/3.4.2/backward"  -I"E:/Uni/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"E:/Uni/Dev-Cpp/include/c++/3.4.2"  -I"E:/Uni/Dev-Cpp/include" 
+BIN  = Tower_Defense_programacion.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Tower_Defense_programacion.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Tower_Defense_programacion.exe" $(LIBS)
+
+main.o: main.cpp E:/Uni/Dev-Cpp/include/c++/3.4.2/iostream   E:/Uni/Dev-Cpp/include/allegro.h E:/Uni/Dev-Cpp/include/allegro/base.h   E:/Uni/Dev-Cpp/include/allegro/internal/alconfig.h   E:/Uni/Dev-Cpp/include/allegro/platform/alplatf.h   E:/Uni/Dev-Cpp/include/allegro/platform/almngw32.h   E:/Uni/Dev-Cpp/include/io.h E:/Uni/Dev-Cpp/include/fcntl.h   E:/Uni/Dev-Cpp/include/direct.h E:/Uni/Dev-Cpp/include/malloc.h   E:/Uni/Dev-Cpp/include/allegro/platform/astdint.h   E:/Uni/Dev-Cpp/include/allegro/system.h   E:/Uni/Dev-Cpp/include/allegro/base.h   E:/Uni/Dev-Cpp/include/allegro/unicode.h   E:/Uni/Dev-Cpp/include/allegro/config.h   E:/Uni/Dev-Cpp/include/allegro/inline/system.inl   E:/Uni/Dev-Cpp/include/allegro/debug.h   E:/Uni/Dev-Cpp/include/allegro/debug.h   E:/Uni/Dev-Cpp/include/allegro/unicode.h   E:/Uni/Dev-Cpp/include/allegro/mouse.h   E:/Uni/Dev-Cpp/include/allegro/timer.h   E:/Uni/Dev-Cpp/include/allegro/keyboard.h   E:/Uni/Dev-Cpp/include/allegro/joystick.h   E:/Uni/Dev-Cpp/include/allegro/palette.h   E:/Uni/Dev-Cpp/include/allegro/gfx.h   E:/Uni/Dev-Cpp/include/allegro/3d.h   E:/Uni/Dev-Cpp/include/allegro/fixed.h   E:/Uni/Dev-Cpp/include/allegro/inline/gfx.inl   E:/Uni/Dev-Cpp/include/allegro/inline/asm.inl   E:/Uni/Dev-Cpp/include/allegro/platform/al386gcc.h   E:/Uni/Dev-Cpp/include/allegro/color.h   E:/Uni/Dev-Cpp/include/allegro/palette.h   E:/Uni/Dev-Cpp/include/allegro/inline/color.inl   E:/Uni/Dev-Cpp/include/allegro/draw.h   E:/Uni/Dev-Cpp/include/allegro/gfx.h   E:/Uni/Dev-Cpp/include/allegro/inline/draw.inl   E:/Uni/Dev-Cpp/include/allegro/3d.h   E:/Uni/Dev-Cpp/include/allegro/inline/gfx.inl   E:/Uni/Dev-Cpp/include/allegro/rle.h   E:/Uni/Dev-Cpp/include/allegro/inline/rle.inl   E:/Uni/Dev-Cpp/include/allegro/compiled.h   E:/Uni/Dev-Cpp/include/allegro/text.h   E:/Uni/Dev-Cpp/include/allegro/font.h   E:/Uni/Dev-Cpp/include/allegro/fli.h   E:/Uni/Dev-Cpp/include/allegro/config.h   E:/Uni/Dev-Cpp/include/allegro/gui.h   E:/Uni/Dev-Cpp/include/allegro/sound.h   E:/Uni/Dev-Cpp/include/allegro/digi.h   E:/Uni/Dev-Cpp/include/allegro/stream.h   E:/Uni/Dev-Cpp/include/allegro/midi.h   E:/Uni/Dev-Cpp/include/allegro/file.h   E:/Uni/Dev-Cpp/include/allegro/lzss.h   E:/Uni/Dev-Cpp/include/allegro/datafile.h   E:/Uni/Dev-Cpp/include/allegro/fixed.h   E:/Uni/Dev-Cpp/include/allegro/fmaths.h   E:/Uni/Dev-Cpp/include/allegro/inline/fmaths.inl   E:/Uni/Dev-Cpp/include/allegro/matrix.h   E:/Uni/Dev-Cpp/include/allegro/fmaths.h   E:/Uni/Dev-Cpp/include/allegro/inline/matrix.inl   E:/Uni/Dev-Cpp/include/allegro/quat.h   E:/Uni/Dev-Cpp/include/allegro/3d.h   E:/Uni/Dev-Cpp/include/allegro/3dmaths.h   E:/Uni/Dev-Cpp/include/allegro/inline/3dmaths.inl   E:/Uni/Dev-Cpp/include/allegro/alcompat.h   E:/Uni/Dev-Cpp/include/allegro/fix.h   E:/Uni/Dev-Cpp/include/allegro/inline/fix.inl   E:/Uni/Dev-Cpp/include/allegro/platform/alwin.h   E:/Uni/Dev-Cpp/include/c++/3.4.2/fstream torre.h   E:/Uni/Dev-Cpp/include/math.h mapa.h enemigos.h rotar.h oleadas.h
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
